@@ -1,0 +1,2255 @@
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:knoholem="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#" xmlns:swrl="http://www.w3.org/2003/11/swrl#" xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#" xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:swrlb="http://www.w3.org/2003/11/swrlb#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:wp4="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#" xml:base="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl">
+  <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl"/>
+  <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#correspondsToIfcEntity -->
+  <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#correspondsToIfcEntity"/>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#correspondsToIfcEnumerationElement -->
+  <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#correspondsToIfcEnumerationElement"/>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasRuleType -->
+  <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasRuleType">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  </owl:AnnotationProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSuggestion -->
+  <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSuggestion">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  </owl:AnnotationProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasWeight -->
+  <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasWeight">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+  </owl:AnnotationProperty>
+  <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#connectsZone -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#connectsZone">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Opening"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Zone"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasBlindsState -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasBlindsState">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Blind"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BlindsState"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ScheduledActivity"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasBuildingRepresentation -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasBuildingRepresentation">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingZoneRepresentation"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#State"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#StateRepresentation"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Wall"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WallRepresentation"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Zone"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDataRepresentation -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDataRepresentation">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#DataRepresentation"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Sensor"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDesktopState -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDesktopState">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#DesktopState"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OfficeWork"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDoor -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDoor">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasOpening"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDoorState -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDoorState">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#DoorState"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OfficeWork"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasElectricalElements -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasElectricalElements">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ElectricalElement"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HorizontalZone"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasEndPath -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasEndPath">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#PathNode"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasFloor -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasFloor">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSlab"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasHVACElements -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasHVACElements">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HVACElement"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HorizontalZone"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasIntermediatePath -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasIntermediatePath">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#PathNode"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasLightState -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasLightState">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#LightState"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ScheduledActivity"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasNextPath -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasNextPath">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#PathNode"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPathPlacement"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasNextState -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasNextState">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Behaviour"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#State"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasState"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasOpening -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasOpening">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasStructuralElements"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPathFrom -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPathFrom">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#InterruptActivity"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#PathNode"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ScheduledActivity"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPathPlacement -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPathPlacement"/>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPathTo -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPathTo">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#InterruptActivity"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#PathNode"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ScheduledActivity"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPlacement -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPlacement">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingControl"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElement"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPreviousPath -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPreviousPath">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#PathNode"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPathPlacement"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPreviousState -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPreviousState">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Behaviour"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#State"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasState"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensor -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensor"/>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensorData -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensorData">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#RealSensorData"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Sensor"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensors -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensors">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElement"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Sensor"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSlab -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSlab">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasStructuralElements"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasStartPath -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasStartPath">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#PathNode"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasState -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasState">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElement"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#State"/>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isStateOf"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasStateValue -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasStateValue">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#State"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasStructuralElements -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasStructuralElements">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HorizontalZone"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#StructuralElement"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSubZones -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSubZones">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Zone"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Zone"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasTimeStamp -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasTimeStamp">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#RealSensorData"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasVolume -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasVolume">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Volume"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Zone"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasWall -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasWall">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasStructuralElements"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasWindow -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasWindow">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasOpening"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasWindowState -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasWindowState">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OfficeWork"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindowState"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasZoneFace -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasZoneFace">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Face"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Opening"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Zone"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isSensorOf -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isSensorOf">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElement"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Sensor"/>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensors"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isStateOf -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isStateOf"/>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isStateValueOf -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isStateValueOf">
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasStateValue"/>
+  </owl:ObjectProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isSubZoneOf -->
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isSubZoneOf">
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSubZones"/>
+  </owl:ObjectProperty>
+  <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasAnalogInput -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasAnalogInput">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasInput"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasAnalogOutput -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasAnalogOutput">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasOutput"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasAnalogValue -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasAnalogValue">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensorValue"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyMeter"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HumiditySensor"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#LuminanceSensor"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#TemperatureSensor"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasBinaryInput -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasBinaryInput">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasInput"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasBinaryOutput -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasBinaryOutput">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasOutput"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasBinaryValue -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasBinaryValue">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OccupancySensor"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OpeningSensor"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensorValue"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDate -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDate">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#InterruptActivity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDescription -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDescription">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDuration -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDuration">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BlindsState"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#DesktopState"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#DoorState"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#InterruptActivity"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#LightState"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindowState"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasEquation -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasEquation"/>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasFrequency -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasFrequency">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#InterruptActivity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasGuid -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasGuid">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Actor"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Behaviour"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingControl"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElement"/>
+          <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Goal"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasHeight -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasHeight">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElement"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Volume"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasInput -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasInput">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Sensor"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasInterruptActivityType -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasInterruptActivityType">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#InterruptActivity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasInterruptableActivityType -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasInterruptableActivityType">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#InterruptActivity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasLength -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasLength">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElement"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Volume"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasLinearEquation -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasLinearEquation">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasEquation"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasMeasurementUnit -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasMeasurementUnit">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#RealSensorData"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasMultiStateInput -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasMultiStateInput">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasInput"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasMultiStateOutput -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasMultiStateOutput">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasOutput"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasName -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasName">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Actor"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Behaviour"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingControl"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElement"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Goal"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#State"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#User"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasNonLinearEquation -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasNonLinearEquation">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasEquation"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasOrientation -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasOrientation">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasOutput"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasOutput -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasOutput">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Actuator"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPerimeter -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPerimeter">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Slab"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Zone"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasRoomNumber -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasRoomNumber">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OfficeWork"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Room"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasRoomType -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasRoomType">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Room"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasScheduledActivityType -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasScheduledActivityType">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ScheduledActivity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensorDataID -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensorDataID">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#RealSensorData"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensorValue -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensorValue">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Sensor"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasStartTime -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasStartTime">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#UserBehaviour"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSymbolicPlacement -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSymbolicPlacement">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasTimeStamp -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasTimeStamp">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasUnit -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasUnit">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Volume"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasUserID -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasUserID">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#User"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#UserBehaviour"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasValue -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasValue">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#RealSensorData"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasWidth -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasWidth">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElement"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Volume"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasXCoord -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasXCoord">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasYCoord -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasYCoord">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasZCoord -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasZCoord">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isOpen -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isOpen">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#DoorState"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindowState"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isPowered -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isPowered">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#DesktopState"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#LightState"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isRaised -->
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isRaised">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BlindsState"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Actor -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Actor">
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcActor</correspondsToIfcEntity>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">correspond to IfcActor</rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Actuator -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Actuator">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingControl"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcActuator</correspondsToIfcEntity>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Alarm -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Alarm">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingControl"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcAlarm</correspondsToIfcEntity>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#AudioVisualAppliance -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#AudioVisualAppliance">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ElectricalElement"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcAudioVisualAppliance</correspondsToIfcEntity>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Automated -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Automated">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SystemBehaviour"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Baseslab -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Baseslab">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Slab"/>
+    <correspondsToIfcEnumerationElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BASESLAB</correspondsToIfcEnumerationElement>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcSlabType</correspondsToIfcEntity>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Behaviour -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Behaviour"/>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Blind -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Blind">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#StructuralElement"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BlindsState -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BlindsState">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SimpleState"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Boiler -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Boiler">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HVACElement"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcBoiler</correspondsToIfcEntity>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Building -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Building">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Zone"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingControl -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingControl">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corresponds to IFCBUILDINGCONTROLSDOMAIN</rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElement -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElement"/>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElementRepresentation -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElementRepresentation">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingRepresentation"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingRepresentation -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingRepresentation">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Visualisation"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corresponds to IfcRepresentation</rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingZoneRepresentation -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingZoneRepresentation">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingRepresentation"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#CO2Sensor -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#CO2Sensor">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Sensor"/>
+    <correspondsToIfcEnumerationElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CO2SENSOR</correspondsToIfcEnumerationElement>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcSensorType</correspondsToIfcEntity>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Furniture"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Close_Opening -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Close_Opening">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#InterruptActivity"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#CoffeeBreak -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#CoffeeBreak">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ScheduledActivity"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ComfortState -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ComfortState">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ComplexState"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#CommunicationsAppliance -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#CommunicationsAppliance">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ElectricalElement"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcCommunicationsAppliance</correspondsToIfcEntity>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ComplexState -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ComplexState">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#State"/>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SimpleState"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Compressor -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Compressor">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HVACElement"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcCompressor</correspondsToIfcEntity>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Controller -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Controller">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingControl"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcController</correspondsToIfcEntity>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Cupboard -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Cupboard">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Furniture"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#DataRepresentation -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#DataRepresentation">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Visualisation"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data representation refers to the manner in which data from sensors is displayed. For example, metered data may be represented as a chart. </rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#DesktopState -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#DesktopState">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SimpleState"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Door -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Door">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Opening"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcDoor</correspondsToIfcEntity>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corresponds to IfcDoor in  IFCSHAREDBLDGELEMENTS </rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#DoorState -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#DoorState">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SimpleState"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ElectricAppliance -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ElectricAppliance">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ElectricalElement"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcElectricAppliance</correspondsToIfcEntity>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ElectricalElement -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ElectricalElement">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElement"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corresponds to IFCELECTRICALDOMAIN</rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ElementedWall -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ElementedWall">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Wall"/>
+    <correspondsToIfcEnumerationElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ELEMENTEDWALL</correspondsToIfcEnumerationElement>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcWallType</correspondsToIfcEntity>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corresponds to IfcWallTypeEnum</rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Elevator -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Elevator">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#StructuralElement"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyEfficiencyState -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyEfficiencyState">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ComplexState"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyEfficient -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyEfficient">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyEfficiencyState"/>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyInefficient"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyInefficient -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyInefficient">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyEfficiencyState"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyMeter -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyMeter">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Sensor"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyUsageAnomaly -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyUsageAnomaly">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyInefficient"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyWasting -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyWasting">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyInefficient"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Enter_Zone -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Enter_Zone">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#InterruptActivity"/>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasNextState"/>
+            <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ZoneOccupied"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPreviousState"/>
+            <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ZoneEmpty"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Face -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Face">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Zone"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corresponds to IfcFace</rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#FaceSurface -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#FaceSurface">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Face"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Fan -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Fan">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HVACElement"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcFan</correspondsToIfcEntity>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#FireSensor -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#FireSensor">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Sensor"/>
+    <correspondsToIfcEnumerationElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CO2SENSOR</correspondsToIfcEnumerationElement>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcSensorType</correspondsToIfcEntity>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Floor -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Floor">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Slab"/>
+    <correspondsToIfcEnumerationElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FLOOR</correspondsToIfcEnumerationElement>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcSlabType</correspondsToIfcEntity>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Furniture -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Furniture">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElement"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Goal -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Goal"/>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HVACElement -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HVACElement">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElement"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">correspond to IFCHVACDOMAIN</rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Heater -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Heater">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HVACElement"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HeaterState -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HeaterState">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SimpleState"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HeaterStateOff -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HeaterStateOff">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HeaterState"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensor"/>
+        <owl:someValuesFrom>
+          <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyMeter"/>
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasAnalogValue"/>
+                <owl:someValuesFrom>
+                  <rdfs:Datatype>
+                    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    <owl:withRestrictions rdf:parseType="Collection">
+                      <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.0</xsd:maxInclusive>
+                      </rdf:Description>
+                    </owl:withRestrictions>
+                  </rdfs:Datatype>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+            </owl:intersectionOf>
+          </owl:Class>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HeaterStateOn -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HeaterStateOn">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HeaterState"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensor"/>
+        <owl:someValuesFrom>
+          <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyMeter"/>
+              <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasAnalogValue"/>
+                <owl:someValuesFrom>
+                  <rdfs:Datatype>
+                    <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    <owl:withRestrictions rdf:parseType="Collection">
+                      <rdf:Description>
+                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.0</xsd:minExclusive>
+                      </rdf:Description>
+                    </owl:withRestrictions>
+                  </rdfs:Datatype>
+                </owl:someValuesFrom>
+              </owl:Restriction>
+            </owl:intersectionOf>
+          </owl:Class>
+        </owl:someValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HorizontalZone -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HorizontalZone">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Zone"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HumiditySensor -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HumiditySensor">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Sensor"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Inside -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Inside">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HorizontalZone"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSlab"/>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Outside"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#InterruptActivity -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#InterruptActivity">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#UserBehaviour"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A user conducting an activity in a zone will attempt to affect the zone in such a way as to bring about their optimal level of comfort. </rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Lamp -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Lamp">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ElectricalElement"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcLamp</correspondsToIfcEntity>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Landing -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Landing">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Slab"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcSlabType</correspondsToIfcEntity>
+    <correspondsToIfcEnumerationElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LANDING</correspondsToIfcEnumerationElement>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#LightState -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#LightState">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SimpleState"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#LuminanceSensor -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#LuminanceSensor">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Sensor"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Lunch -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Lunch">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ScheduledActivity"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Meeting -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Meeting">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ScheduledActivity"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OccupancySensor -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OccupancySensor">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Sensor"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OffFromWork -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OffFromWork">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ScheduledActivity"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OfficeHall -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OfficeHall">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Inside"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OfficeWork -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OfficeWork">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ScheduledActivity"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Open_Opening -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Open_Opening">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#InterruptActivity"/>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasNextState"/>
+            <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OpeningOpen"/>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPreviousState"/>
+            <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OpeningClosed"/>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Opening -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Opening">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#StructuralElement"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OpeningClosed -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OpeningClosed">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Opening"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensors"/>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OpeningSensor"/>
+                  <owl:Restriction>
+                    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasBinaryValue"/>
+                    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+                  </owl:Restriction>
+                </owl:intersectionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OpeningState"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OpeningOpen -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OpeningOpen">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Opening"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensors"/>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OpeningSensor"/>
+                  <owl:Restriction>
+                    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasBinaryValue"/>
+                    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                  </owl:Restriction>
+                </owl:intersectionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OpeningState"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OpeningSensor -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OpeningSensor">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Sensor"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OpeningState -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OpeningState">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SimpleState"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Organisation -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Organisation">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Actor"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Outside -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Outside">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HorizontalZone"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSlab"/>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#PathNode -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#PathNode"/>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corresponds to IfcPlacement</rdfs:comment>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcPlacement</correspondsToIfcEntity>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#PlumbingAndFireProtectionElement -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#PlumbingAndFireProtectionElement">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElement"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">correspond to IFCPLUMBINGFIREPROTECTIONDOMAIN</rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#PlumbingWall -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#PlumbingWall">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Wall"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcWallType</correspondsToIfcEntity>
+    <correspondsToIfcEnumerationElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PLUMBINGWALL</correspondsToIfcEnumerationElement>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corresponds to IfcWallTypeEnum</rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#PolygonalWall -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#PolygonalWall">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Wall"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcWallType</correspondsToIfcEntity>
+    <correspondsToIfcEnumerationElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POLYGONWALL</correspondsToIfcEnumerationElement>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corresponds to IfcWallTypeEnum</rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#RainSensor -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#RainSensor">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Sensor"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Ramp -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Ramp">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#StructuralElement"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcRamp</correspondsToIfcEntity>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corresponds to IfcRamp in  IFCSHAREDBLDGELEMENTS </rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#RealSensorData -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#RealSensorData">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SensorData"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Role -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Role">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#User"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Roof -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Roof">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#StructuralElement"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcRoof</correspondsToIfcEntity>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corresponds to IfcRoof in  IFCSHAREDBLDGELEMENTS </rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#RoofSlab -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#RoofSlab">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Slab"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcSlabType</correspondsToIfcEntity>
+    <correspondsToIfcEnumerationElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROOF</correspondsToIfcEnumerationElement>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Room -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Room">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Inside"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Scheduled -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Scheduled">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SystemBehaviour"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ScheduledActivity -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ScheduledActivity">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#UserBehaviour"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SecurityState -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SecurityState">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ComplexState"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Sensor -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Sensor">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingControl"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcSensor</correspondsToIfcEntity>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">correspond to IfcSensor in IFCBUILDINGCONTROLSDOMAIN. The subclasses correspond to IfcSensorTypeEnum</rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SensorData -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SensorData"/>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ShearWall -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ShearWall">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Wall"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcWallType</correspondsToIfcEntity>
+    <correspondsToIfcEnumerationElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SHEAR</correspondsToIfcEnumerationElement>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corresponds to IfcWallTypeEnum</rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SimpleState -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SimpleState">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#State"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SimulatedSensorData -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SimulatedSensorData">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SensorData"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Slab -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Slab">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#StructuralElement"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcSlab</correspondsToIfcEntity>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Stair -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Stair">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#StructuralElement"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcStair</correspondsToIfcEntity>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corresponds to IfcStair in  IFCSHAREDBLDGELEMENTS </rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#StandardWall -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#StandardWall">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Wall"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcWallType</correspondsToIfcEntity>
+    <correspondsToIfcEnumerationElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STANDARD</correspondsToIfcEnumerationElement>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corresponds to IfcWallTypeEnum</rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#State -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#State"/>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#StateRepresentation -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#StateRepresentation">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingRepresentation"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Storey -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Storey">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Inside"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#StructuralElement -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#StructuralElement">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElement"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mainly correspond to IFCSHAREDBLDGELEMENTS</rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SystemBehaviour -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SystemBehaviour">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Behaviour"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Table -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Table">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Furniture"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#TemperatureSensor -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#TemperatureSensor">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Sensor"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcSensorType</correspondsToIfcEntity>
+    <correspondsToIfcEnumerationElement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TEMPERATURESENSOR</correspondsToIfcEnumerationElement>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#UnitaryControlElement -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#UnitaryControlElement">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingControl"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcUnitaryControllerElement</correspondsToIfcEntity>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#User -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#User">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Actor"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#UserBehaviour -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#UserBehaviour">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Behaviour"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#UserControlled -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#UserControlled">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SystemBehaviour"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#VerticalZone -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#VerticalZone">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Zone"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Visualisation -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Visualisation"/>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Volume -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Volume"/>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Wall -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Wall">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#StructuralElement"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcWall</correspondsToIfcEntity>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corresponds to ifcWall in  IFCSHAREDBLDGELEMENTS</rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WallRepresentation -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WallRepresentation">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElementRepresentation"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindAlertSensor -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindAlertSensor">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindSensor"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindDirectionSensor -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindDirectionSensor">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindSensor"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindPowerSensor -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindPowerSensor">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindSensor"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindSensor -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindSensor">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Sensor"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindSpeedSensor -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindSpeedSensor">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindSensor"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Window -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Window">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Opening"/>
+    <correspondsToIfcEntity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IfcWindow</correspondsToIfcEntity>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corresponds to IfcWindow in  IFCSHAREDBLDGELEMENTS </rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindowState -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindowState">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SimpleState"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Zone -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Zone">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElement"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ZoneEmpty -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ZoneEmpty">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Zone"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensors"/>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OccupancySensor"/>
+                  <owl:Restriction>
+                    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasBinaryValue"/>
+                    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+                  </owl:Restriction>
+                </owl:intersectionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ZoneState"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ZoneOccupied -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ZoneOccupied">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Zone"/>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensors"/>
+            <owl:someValuesFrom>
+              <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                  <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OccupancySensor"/>
+                  <owl:Restriction>
+                    <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasBinaryValue"/>
+                    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                  </owl:Restriction>
+                </owl:intersectionOf>
+              </owl:Class>
+            </owl:someValuesFrom>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ZoneState"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ZoneState -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ZoneState">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SimpleState"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Building_Manager -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Building_Manager">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Employee"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Carer -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Carer">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Employee"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Cleaner -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Cleaner">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Employee"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Cook -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Cook">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Employee"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Employee -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Employee">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Role"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Facility_Manager -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Facility_Manager">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Employee"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#OfficeWorker -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#OfficeWorker">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Employee"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Patient -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Patient">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Role"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Prediction_Method -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Prediction_Method">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#UserBehaviour"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scheduling interrupt activities is done using two different methods, namely the S-curve method and the probabilistic method (tabak). For each activity an assumption is taken on the most appropriate occurrence prediction method based on their characteristics.</rdfs:comment>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Probabilistic -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Probabilistic">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Prediction_Method"/>
+  </owl:Class>
+  <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#S-curve -->
+  <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#S-curve">
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Prediction_Method"/>
+  </owl:Class>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>27158.9163939</hasYCoord>
+    <hasXCoord>8100.77382742</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>be2d964a-06cd-4893-93f3-1d96ce2a0925</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_4297262930220200221">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>28109.5835619</hasYCoord>
+    <hasXCoord>8084.75521778</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_8989319890171771474">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>aec0c5fe-a490-478d-bf23-bf4b51949552</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_4297262930220200221"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_986511396134274378">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>27642.677839</hasYCoord>
+    <hasXCoord>7638.02141364</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_1027518564178930361">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>8b6ca161-76ad-402d-86da-24b24f12fe75</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_986511396134274378"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_3866162070043143232">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>27642.677839</hasYCoord>
+    <hasXCoord>8546.24787951</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_4981028033286178899">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>67279a91-31c7-46e2-a892-cf23a7dc9fa9</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_3866162070043143232"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_5032030514985000189">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>27251.6257473</hasYCoord>
+    <hasXCoord>2823.17674114</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_3650615875776304705">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>ed2b69e8-0834-47ef-93c0-df19bc4a0d4b</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_5032030514985000189"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_8868761966392303633">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>27251.6257473</hasYCoord>
+    <hasXCoord>1763.99585514</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_3241936165210606176">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>253b4158-7403-42db-aa8d-3813e060a872</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_8868761966392303633"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_7151669935012858922">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>27168.4622945</hasYCoord>
+    <hasXCoord>6234.09861137</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_7929942421829812094">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>f8c13fb9-7e49-4c0b-8832-f421f0e335fc</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_7151669935012858922"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_6347770817476921415">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>28119.1294625</hasYCoord>
+    <hasXCoord>6218.08000173</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_7383159609282432590">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>5981cc92-5ca9-4b17-b049-36d259cd79ba</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_6347770817476921415"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_277149649186393004">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>27652.2237395</hasYCoord>
+    <hasXCoord>5771.34619758</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_5002403913063208324">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>dec61a80-f870-4051-a52a-3717ad1f4897</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_277149649186393004"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_796528336135982232">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>27652.2237395</hasYCoord>
+    <hasXCoord>6679.57266345</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_7038991982409928481">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>14f6cf29-48b6-4ae7-ae92-a39d1ec2ef0e</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_796528336135982232"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2772858650941468670">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>27242.7764297</hasYCoord>
+    <hasXCoord>3901.12500846</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_1802477511863369906">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>7391ba9f-809c-44ed-bbfe-94e149a5e1bf</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2772858650941468670"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_8867442728079164631">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>32910.8556263</hasYCoord>
+    <hasXCoord>14903.4252636</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_9025881475709341934">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>1e095344-1c3e-4935-9a89-91d38a21c8cd</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_8867442728079164631"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_4964063548476943018">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>31944.694556</hasYCoord>
+    <hasXCoord>14903.4252636</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_8500376949076631772">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>ede419ef-df2e-45d5-8deb-7c78355bdea9</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_4964063548476943018"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_8274477719482047583">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>31138.6233422</hasYCoord>
+    <hasXCoord>14899.1905885</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_2744947956996808471">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>c0db8e8d-4dd6-4ac5-be2b-35c1385cf969</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_8274477719482047583"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_3561346532196655830">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>30172.4622719</hasYCoord>
+    <hasXCoord>14899.1905885</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_8497876017136361778">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>1d0aaefd-ed20-427b-bfe0-ac4e50d6704d</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_3561346532196655830"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_6134318445893316740">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>29373.6699455</hasYCoord>
+    <hasXCoord>14899.1903927</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_6435568419602933414">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>638fabb7-4a60-41f8-a896-9c24723cbdc8</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_6134318445893316740"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_8358772626896262318">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>28407.5088753</hasYCoord>
+    <hasXCoord>14899.1903927</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_1870347358499174296">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>0d9e0182-81e7-4252-9604-5a8ab08b88a7</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_8358772626896262318"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2362039015948826198">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>29979.8514899</hasYCoord>
+    <hasXCoord>6695.2161163</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_3539805524274756799">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>779c803d-7197-41a8-a758-ce8d995b82ca</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2362039015948826198"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_7832884473296320719">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>33307.701209</hasYCoord>
+    <hasXCoord>6695.2161163</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_2123334620158288936">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>8b63ab7b-2934-4be8-9a7f-2f3e9160dd95</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_7832884473296320719"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2571468155265218402">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>32747.3598001</hasYCoord>
+    <hasXCoord>6232.94029178</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_4420110726188522367">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>46b48f71-7fa2-4df7-b638-798ca962ce9a</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2571468155265218402"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_8523882016492420839">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>32747.3598001</hasYCoord>
+    <hasXCoord>7113.21107548</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_1822738023391502595">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>7eeef44c-1258-4740-b9d6-688230da552d</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_8523882016492420839"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2672630378284211523">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>32055.480034</hasYCoord>
+    <hasXCoord>6232.94029178</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_2343911121245226055">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>43c24ce7-3f09-4d0a-b26c-1f06cdeca2d8</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2672630378284211523"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2183211305063908097">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>31187.871124</hasYCoord>
+    <hasXCoord>6258.41486178</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_6632186403249488291">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>77e1360e-b30c-4812-b28e-7f157bc5ce90</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2183211305063908097"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_5933520067118324713">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>30524.424462</hasYCoord>
+    <hasXCoord>6258.41486178</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_4531975073708741284">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>02161712-c901-4153-82da-3fbb69f8102a</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_5933520067118324713"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_235435783037178020">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>32055.480034</hasYCoord>
+    <hasXCoord>7113.21107548</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_1884812913881234345">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>218ec9bd-4302-4748-8dc7-c90225e12d23</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_235435783037178020"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_301189937396865154">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>31187.871124</hasYCoord>
+    <hasXCoord>7087.73650548</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_7716768319120693948">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>63c8ce63-5c37-4808-a4c0-072cc359bc1f</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_301189937396865154"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_8918464975767348925">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>30524.424462</hasYCoord>
+    <hasXCoord>7087.73650548</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_5086831896521196538">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>593c76b4-50b6-4b4c-a574-a52383a8cc60</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_8918464975767348925"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_8325223154939576735">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>32445.5267324</hasYCoord>
+    <hasXCoord>13750.4687259</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_6342325003625141423">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>1cdf71b3-4d45-43f1-bcaf-064f216dfc9b</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_8325223154939576735"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_1832689999967874842">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>32445.5267324</hasYCoord>
+    <hasXCoord>12706.4860324</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_8023337061065294603">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>8c34c97d-cac3-43fa-8d5e-2ea392405ab3</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_1832689999967874842"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_4491506910815183350">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>32906.4465333</hasYCoord>
+    <hasXCoord>13241.445006</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_3210443977881919160">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>66ef666a-9789-4cab-bc24-596f9b4e3bc3</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_4491506910815183350"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_5274654158050281221">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>31940.285463</hasYCoord>
+    <hasXCoord>13241.445006</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_9015461349894013911">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>01e1aa25-4ff8-4bad-9034-b8f5a6c4a879</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_5274654158050281221"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_7350375988223121427">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>32910.8556263</hasYCoord>
+    <hasXCoord>10957.8335128</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_3007728107372790081">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>2c8b56bb-d2a8-4eef-b7c4-30405a76a421</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_7350375988223121427"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_8007044683000112019">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>31944.694556</hasYCoord>
+    <hasXCoord>10957.8335128</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_2678478668685492256">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>564e029a-c9f1-4a1b-94bb-5142b3d64f0e</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_8007044683000112019"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_7879050067909583089">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>32910.8556263</hasYCoord>
+    <hasXCoord>11701.2715216</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_7090116261662330866">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>1f15e82d-d1df-429d-9252-07caa4761cff</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_7879050067909583089"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_3449040111187369092">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>31944.694556</hasYCoord>
+    <hasXCoord>11701.2715216</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_8715555663819312250">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>262d32f4-3b17-4938-b5f0-e869ae83c922</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_3449040111187369092"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_6325511011744009879">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>30673.2947514</hasYCoord>
+    <hasXCoord>13770.1531638</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_9083747510143745632">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>4399b758-40c3-4ed0-9d16-36940be02230</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_6325511011744009879"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_3395860575912610917">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>28896.7146924</hasYCoord>
+    <hasXCoord>13748.9632137</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_895212367809345658">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>0c1f22b5-7dc9-4e6f-bfb7-b1a1c4489782</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_3395860575912610917"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_4894582507325477336">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>30673.2947514</hasYCoord>
+    <hasXCoord>12726.1704703</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_8121443304999351092">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>44a0ad32-4ccd-4565-8165-1a3e3d508858</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_4894582507325477336"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_3918509626878382255">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>28896.7146924</hasYCoord>
+    <hasXCoord>12786.7289046</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_3984242510141107678">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>897f6d91-a9d3-4b2f-9496-b6a0aedcd187</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_3918509626878382255"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2035319560788370284">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>31134.2145523</hasYCoord>
+    <hasXCoord>13261.1294439</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_8720901588049950298">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>94782e35-d504-4845-9650-8f0ee474e54e</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2035319560788370284"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_5048253966817657124">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>30168.053482</hasYCoord>
+    <hasXCoord>13261.1294439</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_6058842505912397005">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>3ba4346e-cf12-463a-a75e-fb00fc35cd3f</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_5048253966817657124"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_1389765015872145227">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>31138.6233422</hasYCoord>
+    <hasXCoord>10953.5988377</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_4420141251380344963">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>ee7de9e5-d11f-405d-ac89-1c409e417580</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_1389765015872145227"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_1598566243353503195">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>30172.4622719</hasYCoord>
+    <hasXCoord>10953.5988377</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_1028215675118299126">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>b84daa07-b3a1-43fb-82fe-50dd1488176d</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_1598566243353503195"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2739705682869943411">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>31138.6233422</hasYCoord>
+    <hasXCoord>11697.0368464</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_3734127556501895335">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>8d5efc8b-39d0-4499-ae30-3f517fa6be38</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2739705682869943411"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2175490119386637415">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>30172.4622719</hasYCoord>
+    <hasXCoord>11697.0368464</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_7607796053683616439">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>26553011-4d3c-4fbb-957a-470e71c1a2e2</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2175490119386637415"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_3921705529914986213">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>29378.0790386</hasYCoord>
+    <hasXCoord>13280.813686</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_62018244609577309">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>f4ad6b69-7e16-42a2-ab98-2fc608b77b89</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_3921705529914986213"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_7974959770584610465">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>28411.9179683</hasYCoord>
+    <hasXCoord>13280.813686</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_7436147800281482148">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>8ca4f2d1-f33f-4a0d-bc73-7b38c1dd21e0</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_7974959770584610465"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2222437717816437881">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>29373.6699455</hasYCoord>
+    <hasXCoord>10953.5986419</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_4238991012057343998">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>82d8f13a-5f2c-40d1-b08e-6a8c28fca035</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2222437717816437881"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_5319098061492075136">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>28407.5088753</hasYCoord>
+    <hasXCoord>10953.5986419</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_869798169847866768">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>4a3a6ecb-152d-40e3-b9f9-77bc74b501a4</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_5319098061492075136"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_7490026131109068244">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>29373.6699455</hasYCoord>
+    <hasXCoord>11697.0366507</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_6325079554372104754">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>4f0cc03f-e02f-4bbb-83f4-7767380aacba</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_7490026131109068244"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_14092130528940348">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>28407.5088753</hasYCoord>
+    <hasXCoord>11697.0366507</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_338480672810081337">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>cee8c437-8b08-4ba8-9905-d1da8b9b449c</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_14092130528940348"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_3696684145984126567">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>35929.5221838</hasYCoord>
+    <hasXCoord>12014.2569649</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_9162340493956534223">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>3e81cf28-3e28-4d02-b9ed-0628cee53016</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_3696684145984126567"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_8241881388862589208">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>35929.5221838</hasYCoord>
+    <hasXCoord>12590.25148</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_7599755737880786940">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>4da473da-62eb-4021-bb64-a3bc91f37244</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_8241881388862589208"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_463499171103469436">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>35913.4405151</hasYCoord>
+    <hasXCoord>13171.6692917</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_4415925463266092800">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>0a5a4f1e-fcf9-4c7f-bbea-8f812a6a2ace</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_463499171103469436"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_7729724682950055467">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>35913.4405151</hasYCoord>
+    <hasXCoord>13723.8474599</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_8261571433215200665">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>fbbf0194-c56b-4b36-85a5-9931d1e5b1b8</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_7729724682950055467"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_5256085452064646084">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>34726.7831476</hasYCoord>
+    <hasXCoord>12014.2569649</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_1745361086031118530">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>cb7e1068-6e46-4fe0-b9bd-5fab9a798b73</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_5256085452064646084"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_4177076906231249920">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>34726.7831476</hasYCoord>
+    <hasXCoord>12590.25148</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_2105136418093996055">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>b4a4c12f-9ef2-40f8-8d9f-8eb37ab2e3df</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_4177076906231249920"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_695398568828524331">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>34742.8648163</hasYCoord>
+    <hasXCoord>13171.6692917</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_3525168416882010113">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>5e4b4f64-b5d8-4a7d-ba32-8c64b207d871</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_695398568828524331"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_7908298631071854486">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>34742.8648163</hasYCoord>
+    <hasXCoord>13723.8474599</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_3448292190351038644">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>2e49ced2-1cf4-47cd-a4be-99da2251354d</hasGuid>
+    <hasWidth>464.0</hasWidth>
+    <hasLength>432.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_7908298631071854486"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_3500945396089042112">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>25798.5359868</hasYCoord>
+    <hasXCoord>7635.02299854</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_706125779854581730">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>36c15254-2be9-4fb2-89d8-f763009624bb</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_3500945396089042112"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2221754944891748654">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>25798.5359868</hasYCoord>
+    <hasXCoord>8543.24946441</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_6188760229046581301">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>47175f3d-5eb2-4623-865c-d9b2a8d07de3</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2221754944891748654"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2534840119303082975">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>25809.7841638</hasYCoord>
+    <hasXCoord>5775.51924115</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_3939248824996690085">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>c8795b53-6766-4ac1-94e7-7dc4e0b103cc</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2534840119303082975"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_3447795370005423130">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>25809.7841638</hasYCoord>
+    <hasXCoord>6683.74570702</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_4430411617086287564">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>27d2d886-6d0e-4bba-9d9e-fcc90dcac7cb</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_3447795370005423130"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_6604714832767168332">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>25813.7265125</hasYCoord>
+    <hasXCoord>2174.10606181</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_7111704750663525254">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>795a79a0-bd7c-4a1c-9fcc-939a0143764d</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_6604714832767168332"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_5727838082934972372">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>25813.7265125</hasYCoord>
+    <hasXCoord>3082.33252768</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair_959098972780750404">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair"/>
+    <hasGuid>3542c779-c8a3-4224-87d3-8d34425819b3</hasGuid>
+    <hasWidth>432.0</hasWidth>
+    <hasLength>464.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_5727838082934972372"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_1665211735169896784">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>21253.7890855</hasYCoord>
+    <hasXCoord>18839.2577219</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#R1">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Room"/>
+    <hasGuid>6916163b-d3e2-4fd7-8889-950bb0ee7c8c</hasGuid>
+    <hasWidth>4340.8225271</hasWidth>
+    <hasLength>2993.02371642</hasLength>
+    <hasPerimeter>18980.854924:19752.1276943;21012.4896518:19752.1276943;21003.1272798:22757.449112;16668.3490355:22757.449112;16677.7114076:20370.0442474;18962.1301799:20360.6818754</hasPerimeter>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_1665211735169896784"/>
+    <hasStructuralElements rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Officedoor_3980905601167203478"/>
+    <hasStructuralElements rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Officedoor_3980905601167203478"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_5111838985645641565">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>18243.0257513</hasYCoord>
+    <hasXCoord>18836.0639435</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#R2">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Room"/>
+    <hasGuid>59f15d48-e2e5-40a4-9afc-90fd540b0e32</hasGuid>
+    <hasRoomNumber>2</hasRoomNumber>
+    <hasWidth>4344.03497039</hasWidth>
+    <hasLength>2985.49241783</hasLength>
+    <hasPerimeter>21008.4631999:19751.4306516;21017.5475001:16744.5272832;16657.083401:16717.2743826;16657.083401:18761.2419291;18955.4113532:18815.7477303;18982.6642538:19751.4306516</hasPerimeter>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_5111838985645641565"/>
+    <hasStructuralElements rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Officedoor_2200920851159657275"/>
+    <hasStructuralElements rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Officedoor_2200920851159657275"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_7970978071632114574">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>19282.3001382</hasYCoord>
+    <hasXCoord>16014.4471584</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Hallway">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Zone"/>
+    <hasGuid>89cc33bc-7322-435b-8385-00208624da14</hasGuid>
+    <hasWidth>1312.00140956</hasWidth>
+    <hasLength>6952.04118507</hasLength>
+    <hasPerimeter>15376.1970718:22767.4183202;16675.2520014:22776.5026204;16657.083401:15817.9286622;15358.0284714:15790.6757615</hasPerimeter>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_7970978071632114574"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2575448567583465142">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>9225.73223383</hasYCoord>
+    <hasXCoord>15884.8553449</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Officedoor">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Door"/>
+    <hasGuid>b510cb42-1f8c-480d-b4b9-233e8458bf60</hasGuid>
+    <hasWidth>704.0</hasWidth>
+    <hasLength>50.4</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2575448567583465142"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_284344611379865703">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>9225.73223383</hasYCoord>
+    <hasXCoord>13979.7824495</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Officedoor_701453413012454732">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Door"/>
+    <hasGuid>040a9a85-86eb-48dd-8559-16b086570292</hasGuid>
+    <hasWidth>704.0</hasWidth>
+    <hasLength>50.4</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_284344611379865703"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2874136386044010019">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>9225.73223383</hasYCoord>
+    <hasXCoord>11995.5184495</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Officedoor_3801961163720305319">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Door"/>
+    <hasGuid>ee63d575-14d0-432b-ae89-f3eb6f128ca9</hasGuid>
+    <hasWidth>704.0</hasWidth>
+    <hasLength>50.4</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2874136386044010019"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_7947083395346200243">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>9225.73277546</hasYCoord>
+    <hasXCoord>9994.44754784</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Officedoor_9008081786581684578">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Door"/>
+    <hasGuid>24f2552b-a191-4a15-bd8b-7948abac2ab8</hasGuid>
+    <hasWidth>704.0</hasWidth>
+    <hasLength>50.4</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_7947083395346200243"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_6374367213276111056">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>8754.13223388</hasYCoord>
+    <hasXCoord>16638.8464583</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Officedoor_4918937646746558">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Door"/>
+    <hasGuid>ca99bcf8-f3e3-4f00-883d-f99cd82bd9b8</hasGuid>
+    <hasWidth>50.4</hasWidth>
+    <hasLength>704.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_6374367213276111056"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_3480632676906398188">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>12593.8781289</hasYCoord>
+    <hasXCoord>16638.8464583</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Officedoor_1327704049799709092">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Door"/>
+    <hasGuid>af4cfe8a-77df-41f1-ac3f-915840704d49</hasGuid>
+    <hasWidth>50.4</hasWidth>
+    <hasLength>704.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_3480632676906398188"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_4512149728413539588">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>14922.6781289</hasYCoord>
+    <hasXCoord>16638.8464583</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Officedoor_4618272653922301977">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Door"/>
+    <hasGuid>c3a51b06-f37b-4817-b583-e86f5f707498</hasGuid>
+    <hasWidth>50.4</hasWidth>
+    <hasLength>704.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_4512149728413539588"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_56991088920781779">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>18336.6795423</hasYCoord>
+    <hasXCoord>16638.8464583</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Officedoor_2200920851159657275">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Door"/>
+    <hasGuid>c4a73dce-bd76-4436-8f9b-b46cf31a2d68</hasGuid>
+    <hasWidth>50.4</hasWidth>
+    <hasLength>704.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_56991088920781779"/>
+    <connectsZone rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#R2"/>
+    <connectsZone rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Hallway"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_157697937331472226">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>21723.8795401</hasYCoord>
+    <hasXCoord>9228.4472165</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Officedoor_3872943660539859742">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Door"/>
+    <hasGuid>889ca50c-54fb-4de2-a297-0597b4de6d68</hasGuid>
+    <hasWidth>50.4000000837</hasWidth>
+    <hasLength>704.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_157697937331472226"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_4189817921013117755">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>19243.8881162</hasYCoord>
+    <hasXCoord>15388.4464537</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Officedoor_3398665497726531029">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Door"/>
+    <hasGuid>5553b3d9-dac7-457f-b80c-f7d8a6c37867</hasGuid>
+    <hasWidth>50.4</hasWidth>
+    <hasLength>704.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_4189817921013117755"/>
+    <connectsZone rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Hallway"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_8290371341563465810">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>22252.7207307</hasYCoord>
+    <hasXCoord>16638.8464583</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Officedoor_3980905601167203478">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Door"/>
+    <hasGuid>6456390c-2c86-40e4-8607-130f0811c9d8</hasGuid>
+    <hasWidth>50.4</hasWidth>
+    <hasLength>704.0</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_8290371341563465810"/>
+    <connectsZone rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#R1"/>
+    <connectsZone rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Hallway"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2362950895803473186">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>40864.3009438</hasYCoord>
+    <hasXCoord>7939.24846871</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Officedoor_5780577930883913266">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Door"/>
+    <hasGuid>439dfaad-35f3-4d4f-810c-05e1267db483</hasGuid>
+    <hasWidth>704.0</hasWidth>
+    <hasLength>50.4</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2362950895803473186"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2813716284514727931">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement"/>
+    <hasYCoord>61035.6817721</hasYCoord>
+    <hasXCoord>19833.5242361</hasXCoord>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Officedoor_1737529364580863661">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Door"/>
+    <hasGuid>82bb9129-38bf-4bcf-9cf5-3c9b9c35ab40</hasGuid>
+    <hasWidth>704.0</hasWidth>
+    <hasLength>50.4</hasLength>
+    <hasPlacement rdf:resource="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#position_2813716284514727931"/>
+  </owl:NamedIndividual>
+</rdf:RDF>
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
