@@ -1,0 +1,166 @@
+(dp0
+S'hasWall'
+p1
+S'User input'
+p2
+sS'hasLightState'
+p3
+S'User input'
+p4
+sS'hasPlacement'
+p5
+S'Placement'
+p6
+sS'hasPreviousState'
+p7
+S'User input'
+p8
+sS'hasPathTo'
+p9
+S'User input'
+p10
+sS'hasSubZones'
+p11
+S'Zone'
+p12
+sS'hasSensors'
+p13
+S'Sensor'
+p14
+sS'hasEndPath'
+p15
+S'User input'
+p16
+sS'hasFloor'
+p17
+S'User input'
+p18
+sS'hasDoorState'
+p19
+S'User input'
+p20
+sS'hasTimeStamp'
+p21
+S'User input'
+p22
+sS'hasBlindsState'
+p23
+S'User input'
+p24
+sS'hasWindowState'
+p25
+S'User input'
+p26
+sS'hasStructuralElements'
+p27
+S'StructuralElement'
+p28
+sS'hasNextState'
+p29
+S'User input'
+p30
+sS'hasZoneFace'
+p31
+S'User input'
+p32
+sS'hasBuildingRepresentation'
+p33
+S'User input'
+p34
+sS'hasIntermediatePath'
+p35
+S'User input'
+p36
+sS'connectsZone'
+p37
+S'Zone'
+p38
+sS'isSensorOf'
+p39
+S'Zone'
+p40
+sS'hasHVACElements'
+p41
+S'HVACElement'
+p42
+sS'hasStateValue'
+p43
+S'User input'
+p44
+sS'hasNextPath'
+p45
+S'User input'
+p46
+sS'hasOpening'
+p47
+S'User input'
+p48
+sS'hasPreviousPath'
+p49
+S'User input'
+p50
+sS'hasSlab'
+p51
+S'User input'
+p52
+sS'hasDesktopState'
+p53
+S'User input'
+p54
+sS'hasState'
+p55
+S'User input'
+p56
+sS'hasSensor'
+p57
+S'User input'
+p58
+sS'hasElectricalElements'
+p59
+S'ElectricalElement'
+p60
+sS'hasPathFrom'
+p61
+S'User input'
+p62
+sS'isStateValueOf'
+p63
+S'User input'
+p64
+sS'hasSensorData'
+p65
+S'User input'
+p66
+sS'isStateOf'
+p67
+S'User input'
+p68
+sS'isSubZoneOf'
+p69
+S'User input'
+p70
+sS'hasDataRepresentation'
+p71
+S'User input'
+p72
+sS'hasStartPath'
+p73
+S'User input'
+p74
+sS'hasWindow'
+p75
+S'Window'
+p76
+sS'hasVolume'
+p77
+S'User input'
+p78
+sS'hasPathPlacement'
+p79
+S'User input'
+p80
+sS'hasDoor'
+p81
+S'Door'
+p82
+s.

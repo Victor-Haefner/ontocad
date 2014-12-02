@@ -1,0 +1,7 @@
+#!/bin/bash
+
+Path="`dirname \"$0\"`"              # relative
+Path="`( cd \"$Path\" && pwd )`"  # absolutized and normalized
+
+cd $Path/src
+python main.py

@@ -1,0 +1,15 @@
+*.pyc
+*~
+*.swp
+profile.*
+build
+*.lo
+*.o
+autom4te.cache
+rect.jpeg
+result.jpeg
+test_img
+test_src
+pygtkimageview
+gtkimageview
+src/.ocad.tmp

@@ -1,0 +1,178 @@
+(dp0
+S'hasYCoord'
+p1
+S'Y Coordinate'
+p2
+sS'hasBinaryOutput'
+p3
+S'User input'
+p4
+sS'hasAnalogValue'
+p5
+S'User input'
+p6
+sS'hasEquation'
+p7
+S'User input'
+p8
+sS'hasLinearEquation'
+p9
+S'User input'
+p10
+sS'hasFrequency'
+p11
+S'User input'
+p12
+sS'hasAnalogOutput'
+p13
+S'User input'
+p14
+sS'hasDuration'
+p15
+S'User input'
+p16
+sS'hasTimeStamp'
+p17
+S'User input'
+p18
+sS'hasInterruptActivityType'
+p19
+S'User input'
+p20
+sS'hasName'
+p21
+S'User input'
+p22
+sS'hasZCoord'
+p23
+S'None'
+p24
+sS'isPowered'
+p25
+S'User input'
+p26
+sS'hasRoomNumber'
+p27
+S'User input'
+p28
+sS'hasSymbolicPlacement'
+p29
+S'User input'
+p30
+sS'hasRoomType'
+p31
+S'User input'
+p32
+sS'hasValue'
+p33
+S'User input'
+p34
+sS'hasInput'
+p35
+S'User input'
+p36
+sS'hasXCoord'
+p37
+S'X Coordinate'
+p38
+sS'hasDate'
+p39
+S'User input'
+p40
+sS'hasMultiStateInput'
+p41
+S'User input'
+p42
+sS'hasMultiStateOutput'
+p43
+S'User input'
+p44
+sS'hasSensorDataID'
+p45
+S'User input'
+p46
+sS'hasHeight'
+p47
+S'User input'
+p48
+sS'isRaised'
+p49
+S'User input'
+p50
+sS'hasUserID'
+p51
+S'User input'
+p52
+sS'hasLength'
+p53
+S'Length'
+p54
+sS'hasGuid'
+p55
+S'GUID'
+p56
+sS'hasSensorValue'
+p57
+S'User input'
+p58
+sS'isOpen'
+p59
+S'User input'
+p60
+sS'hasNonLinearEquation'
+p61
+S'User input'
+p62
+sS'hasBinaryValue'
+p63
+S'User input'
+p64
+sS'hasAnalogInput'
+p65
+S'User input'
+p66
+sS'hasWidth'
+p67
+S'Width'
+p68
+sS'hasScheduledActivityType'
+p69
+S'User input'
+p70
+sS'hasOrientation'
+p71
+S'User input'
+p72
+sS'hasMeasurementUnit'
+p73
+S'User input'
+p74
+sS'hasStartTime'
+p75
+S'User input'
+p76
+sS'hasOutput'
+p77
+S'User input'
+p78
+sS'hasInterruptableActivityType'
+p79
+S'User input'
+p80
+sS'hasDescription'
+p81
+S'User input'
+p82
+sS'hasBinaryInput'
+p83
+S'User input'
+p84
+sS'hasPerimeter'
+p85
+S'Perimeter'
+p86
+sS'hasUnit'
+p87
+S'User input'
+p88
+s.

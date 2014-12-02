@@ -1,0 +1,12 @@
+uniform vec2 pixelsize;
+varying vec2 texCoord;
+varying vec2 pixelsize_tc;
+varying vec2 ang;
+attribute vec4 angles;
+void main() {
+	gl_Position = ftransform();
+	texCoord = gl_MultiTexCoord0.xy;
+	pixelsize_tc.xy = 2.0 * pixelsize.xy / gl_MultiTexCoord0.zw;
+	ang.xy = angles.xy;
+	gl_FrontColor = gl_Color;
+} 

@@ -1,0 +1,2222 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
+    <!ENTITY xsp "http://www.owl-ontologies.com/2005/08/07/xsp.owl#" >
+    <!ENTITY wp4 "http://www.semanticweb.org/ontologies/2012/9/wp4.owl#" >
+    <!ENTITY knoholem "http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:knoholem="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wp4="http://www.semanticweb.org/ontologies/2012/9/wp4.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2012/9/knoholem.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#correspondsToIfcEntity -->
+
+    <owl:AnnotationProperty rdf:about="&knoholem;correspondsToIfcEntity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#correspondsToIfcEnumerationElement -->
+
+    <owl:AnnotationProperty rdf:about="&knoholem;correspondsToIfcEnumerationElement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasRuleType -->
+
+    <owl:AnnotationProperty rdf:about="&knoholem;hasRuleType">
+        <rdfs:range rdf:resource="&xsd;string"/>
+		<rdfs:domain rdf:resource="&swrl;Imp"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSuggestion -->
+
+    <owl:AnnotationProperty rdf:about="&knoholem;hasSuggestion">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&swrl;Imp"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasWeight -->
+
+    <owl:AnnotationProperty rdf:about="&knoholem;hasWeight">
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain rdf:resource="&swrl;Imp"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#connectsZone -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;connectsZone">
+        <rdfs:domain rdf:resource="&knoholem;Opening"/>
+        <rdfs:range rdf:resource="&knoholem;Zone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasBlindsState -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasBlindsState">
+        <rdfs:domain rdf:resource="&knoholem;Blind"/>
+        <rdfs:range rdf:resource="&knoholem;BlindsState"/>
+        <rdfs:domain rdf:resource="&knoholem;ScheduledActivity"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasBuildingRepresentation -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasBuildingRepresentation">
+        <rdfs:range rdf:resource="&knoholem;BuildingZoneRepresentation"/>
+        <rdfs:domain rdf:resource="&knoholem;State"/>
+        <rdfs:range rdf:resource="&knoholem;StateRepresentation"/>
+        <rdfs:domain rdf:resource="&knoholem;Wall"/>
+        <rdfs:range rdf:resource="&knoholem;WallRepresentation"/>
+        <rdfs:domain rdf:resource="&knoholem;Zone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDataRepresentation -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasDataRepresentation">
+        <rdfs:range rdf:resource="&knoholem;DataRepresentation"/>
+        <rdfs:domain rdf:resource="&knoholem;Sensor"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDesktopState -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasDesktopState">
+        <rdfs:range rdf:resource="&knoholem;DesktopState"/>
+        <rdfs:domain rdf:resource="&knoholem;OfficeWork"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDoor -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasDoor">
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasOpening"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDoorState -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasDoorState">
+        <rdfs:range rdf:resource="&knoholem;DoorState"/>
+        <rdfs:domain rdf:resource="&knoholem;OfficeWork"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasElectricalElements -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasElectricalElements">
+        <rdfs:range rdf:resource="&knoholem;ElectricalElement"/>
+        <rdfs:domain rdf:resource="&knoholem;HorizontalZone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasEndPath -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasEndPath">
+        <rdfs:domain rdf:resource="&knoholem;PathNode"/>
+        <rdfs:range rdf:resource="&knoholem;Placement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasFloor -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasFloor">
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasSlab"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasHVACElements -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasHVACElements">
+        <rdfs:range rdf:resource="&knoholem;HVACElement"/>
+        <rdfs:domain rdf:resource="&knoholem;HorizontalZone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasIntermediatePath -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasIntermediatePath">
+        <rdfs:domain rdf:resource="&knoholem;PathNode"/>
+        <rdfs:range rdf:resource="&knoholem;Placement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasLightState -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasLightState">
+        <rdfs:range rdf:resource="&knoholem;LightState"/>
+        <rdfs:domain rdf:resource="&knoholem;ScheduledActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasNextPath -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasNextPath">
+        <rdfs:domain rdf:resource="&knoholem;PathNode"/>
+        <rdfs:range rdf:resource="&knoholem;Placement"/>
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasPathPlacement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasNextState -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasNextState">
+        <rdfs:domain rdf:resource="&knoholem;Behaviour"/>
+        <rdfs:range rdf:resource="&knoholem;State"/>
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasState"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasOpening -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasOpening">
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasStructuralElements"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPathFrom -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasPathFrom">
+        <rdfs:domain rdf:resource="&knoholem;InterruptActivity"/>
+        <rdfs:range rdf:resource="&knoholem;PathNode"/>
+        <rdfs:domain rdf:resource="&knoholem;ScheduledActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPathPlacement -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasPathPlacement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPathTo -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasPathTo">
+        <rdfs:domain rdf:resource="&knoholem;InterruptActivity"/>
+        <rdfs:range rdf:resource="&knoholem;PathNode"/>
+        <rdfs:domain rdf:resource="&knoholem;ScheduledActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPlacement -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasPlacement">
+        <rdfs:domain rdf:resource="&knoholem;BuildingControl"/>
+        <rdfs:domain rdf:resource="&knoholem;BuildingElement"/>
+        <rdfs:range rdf:resource="&knoholem;Placement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPreviousPath -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasPreviousPath">
+        <rdfs:domain rdf:resource="&knoholem;PathNode"/>
+        <rdfs:range rdf:resource="&knoholem;Placement"/>
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasPathPlacement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPreviousState -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasPreviousState">
+        <rdfs:domain rdf:resource="&knoholem;Behaviour"/>
+        <rdfs:range rdf:resource="&knoholem;State"/>
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasState"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensor -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasSensor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensorData -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasSensorData">
+        <rdfs:range rdf:resource="&knoholem;RealSensorData"/>
+        <rdfs:domain rdf:resource="&knoholem;Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensors -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasSensors">
+        <rdfs:domain rdf:resource="&knoholem;BuildingElement"/>
+        <rdfs:range rdf:resource="&knoholem;Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSlab -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasSlab">
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasStructuralElements"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasStartPath -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasStartPath">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&knoholem;PathNode"/>
+        <rdfs:range rdf:resource="&knoholem;Placement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasState -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasState">
+        <rdfs:domain rdf:resource="&knoholem;BuildingElement"/>
+        <rdfs:range rdf:resource="&knoholem;State"/>
+        <owl:inverseOf rdf:resource="&knoholem;isStateOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasStateValue -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasStateValue">
+        <rdfs:domain rdf:resource="&knoholem;State"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasStructuralElements -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasStructuralElements">
+        <rdfs:domain rdf:resource="&knoholem;HorizontalZone"/>
+        <rdfs:range rdf:resource="&knoholem;StructuralElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSubZones -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasSubZones">
+        <rdfs:domain rdf:resource="&knoholem;Zone"/>
+        <rdfs:range rdf:resource="&knoholem;Zone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasTimeStamp -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasTimeStamp">
+        <rdfs:domain rdf:resource="&knoholem;RealSensorData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasVolume -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasVolume">
+        <rdfs:range rdf:resource="&knoholem;Volume"/>
+        <rdfs:domain rdf:resource="&knoholem;Zone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasWall -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasWall">
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasStructuralElements"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasWindow -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasWindow">
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasOpening"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasWindowState -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasWindowState">
+        <rdfs:domain rdf:resource="&knoholem;OfficeWork"/>
+        <rdfs:range rdf:resource="&knoholem;WindowState"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasZoneFace -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;hasZoneFace">
+        <rdfs:range rdf:resource="&knoholem;Face"/>
+        <rdfs:domain rdf:resource="&knoholem;Opening"/>
+        <rdfs:domain rdf:resource="&knoholem;Zone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isSensorOf -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;isSensorOf">
+        <rdfs:range rdf:resource="&knoholem;BuildingElement"/>
+        <rdfs:domain rdf:resource="&knoholem;Sensor"/>
+        <owl:inverseOf rdf:resource="&knoholem;hasSensors"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isStateOf -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;isStateOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isStateValueOf -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;isStateValueOf">
+        <owl:inverseOf rdf:resource="&knoholem;hasStateValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isSubZoneOf -->
+
+    <owl:ObjectProperty rdf:about="&knoholem;isSubZoneOf">
+        <owl:inverseOf rdf:resource="&knoholem;hasSubZones"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasAnalogInput -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasAnalogInput">
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasInput"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasAnalogOutput -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasAnalogOutput">
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasOutput"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasAnalogValue -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasAnalogValue">
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasSensorValue"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&knoholem;EnergyMeter"/>
+                    <rdf:Description rdf:about="&knoholem;HumiditySensor"/>
+                    <rdf:Description rdf:about="&knoholem;LuminanceSensor"/>
+                    <rdf:Description rdf:about="&knoholem;TemperatureSensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasBinaryInput -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasBinaryInput">
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasInput"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasBinaryOutput -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasBinaryOutput">
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasOutput"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasBinaryValue -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasBinaryValue">
+        <rdfs:domain rdf:resource="&knoholem;OccupancySensor"/>
+        <rdfs:domain rdf:resource="&knoholem;OpeningSensor"/>
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasSensorValue"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDate -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasDate">
+        <rdfs:domain rdf:resource="&knoholem;InterruptActivity"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasDescription">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasDuration -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasDuration">
+        <rdfs:domain rdf:resource="&knoholem;BlindsState"/>
+        <rdfs:domain rdf:resource="&knoholem;DesktopState"/>
+        <rdfs:domain rdf:resource="&knoholem;DoorState"/>
+        <rdfs:domain rdf:resource="&knoholem;InterruptActivity"/>
+        <rdfs:domain rdf:resource="&knoholem;LightState"/>
+        <rdfs:domain rdf:resource="&knoholem;WindowState"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasEquation -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasEquation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasFrequency -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasFrequency">
+        <rdfs:domain rdf:resource="&knoholem;InterruptActivity"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasGuid -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasGuid">
+        <rdfs:domain rdf:resource="&knoholem;BuildingElement"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&knoholem;Actor"/>
+                    <rdf:Description rdf:about="&knoholem;Behaviour"/>
+                    <rdf:Description rdf:about="&knoholem;BuildingControl"/>
+                    <rdf:Description rdf:about="&knoholem;BuildingElement"/>
+                    <rdf:Description rdf:about="&knoholem;Goal"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasHeight -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasHeight">
+        <rdfs:domain rdf:resource="&knoholem;BuildingElement"/>
+        <rdfs:domain rdf:resource="&knoholem;Volume"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasInput -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasInput">
+        <rdfs:domain rdf:resource="&knoholem;Sensor"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasInterruptActivityType -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasInterruptActivityType">
+        <rdfs:domain rdf:resource="&knoholem;InterruptActivity"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasInterruptableActivityType -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasInterruptableActivityType">
+        <rdfs:domain rdf:resource="&knoholem;InterruptActivity"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasLength -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasLength">
+        <rdfs:domain rdf:resource="&knoholem;BuildingElement"/>
+        <rdfs:domain rdf:resource="&knoholem;Volume"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasLinearEquation -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasLinearEquation">
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasEquation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasMeasurementUnit -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasMeasurementUnit">
+        <rdfs:domain rdf:resource="&knoholem;RealSensorData"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasMultiStateInput -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasMultiStateInput">
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasInput"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasMultiStateOutput -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasMultiStateOutput">
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasOutput"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasName -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasName">
+        <rdfs:domain rdf:resource="&knoholem;Actor"/>
+        <rdfs:domain rdf:resource="&knoholem;Behaviour"/>
+        <rdfs:domain rdf:resource="&knoholem;BuildingControl"/>
+        <rdfs:domain rdf:resource="&knoholem;BuildingElement"/>
+        <rdfs:domain rdf:resource="&knoholem;Goal"/>
+        <rdfs:domain rdf:resource="&knoholem;State"/>
+        <rdfs:domain rdf:resource="&knoholem;User"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasNonLinearEquation -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasNonLinearEquation">
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasEquation"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasOrientation -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasOrientation">
+        <rdfs:domain rdf:resource="&knoholem;Placement"/>
+        <rdfs:subPropertyOf rdf:resource="&knoholem;hasOutput"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasOutput -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasOutput">
+        <rdfs:domain rdf:resource="&knoholem;Actuator"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasPerimeter -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasPerimeter">
+        <rdfs:domain rdf:resource="&knoholem;Slab"/>
+        <rdfs:domain rdf:resource="&knoholem;Zone"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasRoomNumber -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasRoomNumber">
+        <rdfs:domain rdf:resource="&knoholem;OfficeWork"/>
+        <rdfs:domain rdf:resource="&knoholem;Room"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasRoomType -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasRoomType">
+        <rdfs:domain rdf:resource="&knoholem;Room"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasScheduledActivityType -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasScheduledActivityType">
+        <rdfs:domain rdf:resource="&knoholem;ScheduledActivity"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensorDataID -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasSensorDataID">
+        <rdfs:domain rdf:resource="&knoholem;RealSensorData"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSensorValue -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasSensorValue">
+        <rdfs:domain rdf:resource="&knoholem;Sensor"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasStartTime -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasStartTime">
+        <rdfs:domain rdf:resource="&knoholem;UserBehaviour"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasSymbolicPlacement -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasSymbolicPlacement">
+        <rdfs:domain rdf:resource="&knoholem;Placement"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasTimeStamp">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasUnit -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasUnit">
+        <rdfs:domain rdf:resource="&knoholem;Volume"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasUserID -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasUserID">
+        <rdfs:domain rdf:resource="&knoholem;User"/>
+        <rdfs:domain rdf:resource="&knoholem;UserBehaviour"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasValue">
+        <rdfs:domain rdf:resource="&knoholem;RealSensorData"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasWidth -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasWidth">
+        <rdfs:domain rdf:resource="&knoholem;BuildingElement"/>
+        <rdfs:domain rdf:resource="&knoholem;Volume"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasXCoord -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasXCoord">
+        <rdfs:domain rdf:resource="&knoholem;Placement"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasYCoord -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasYCoord">
+        <rdfs:domain rdf:resource="&knoholem;Placement"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#hasZCoord -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;hasZCoord">
+        <rdfs:domain rdf:resource="&knoholem;Placement"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isOpen -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;isOpen">
+        <rdfs:domain rdf:resource="&knoholem;DoorState"/>
+        <rdfs:domain rdf:resource="&knoholem;WindowState"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isPowered -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;isPowered">
+        <rdfs:domain rdf:resource="&knoholem;DesktopState"/>
+        <rdfs:domain rdf:resource="&knoholem;LightState"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#isRaised -->
+
+    <owl:DatatypeProperty rdf:about="&knoholem;isRaised">
+        <rdfs:domain rdf:resource="&knoholem;BlindsState"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Actor -->
+
+    <owl:Class rdf:about="&knoholem;Actor">
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcActor</correspondsToIfcEntity>
+        <rdfs:comment rdf:datatype="&xsd;string">correspond to IfcActor</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Actuator -->
+
+    <owl:Class rdf:about="&knoholem;Actuator">
+        <rdfs:subClassOf rdf:resource="&knoholem;BuildingControl"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcActuator</correspondsToIfcEntity>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Alarm -->
+
+    <owl:Class rdf:about="&knoholem;Alarm">
+        <rdfs:subClassOf rdf:resource="&knoholem;BuildingControl"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcAlarm</correspondsToIfcEntity>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#AudioVisualAppliance -->
+
+    <owl:Class rdf:about="&knoholem;AudioVisualAppliance">
+        <rdfs:subClassOf rdf:resource="&knoholem;ElectricalElement"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcAudioVisualAppliance</correspondsToIfcEntity>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Automated -->
+
+    <owl:Class rdf:about="&knoholem;Automated">
+        <rdfs:subClassOf rdf:resource="&knoholem;SystemBehaviour"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Baseslab -->
+
+    <owl:Class rdf:about="&knoholem;Baseslab">
+        <rdfs:subClassOf rdf:resource="&knoholem;Slab"/>
+        <correspondsToIfcEnumerationElement rdf:datatype="&xsd;string">BASESLAB</correspondsToIfcEnumerationElement>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcSlabType</correspondsToIfcEntity>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Behaviour -->
+
+    <owl:Class rdf:about="&knoholem;Behaviour"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Blind -->
+
+    <owl:Class rdf:about="&knoholem;Blind">
+        <rdfs:subClassOf rdf:resource="&knoholem;StructuralElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BlindsState -->
+
+    <owl:Class rdf:about="&knoholem;BlindsState">
+        <rdfs:subClassOf rdf:resource="&knoholem;SimpleState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Boiler -->
+
+    <owl:Class rdf:about="&knoholem;Boiler">
+        <rdfs:subClassOf rdf:resource="&knoholem;HVACElement"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcBoiler</correspondsToIfcEntity>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Building -->
+
+    <owl:Class rdf:about="&knoholem;Building">
+        <rdfs:subClassOf rdf:resource="&knoholem;Zone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingControl -->
+
+    <owl:Class rdf:about="&knoholem;BuildingControl">
+        <rdfs:comment rdf:datatype="&xsd;string">corresponds to IFCBUILDINGCONTROLSDOMAIN</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElement -->
+
+    <owl:Class rdf:about="&knoholem;BuildingElement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingElementRepresentation -->
+
+    <owl:Class rdf:about="&knoholem;BuildingElementRepresentation">
+        <rdfs:subClassOf rdf:resource="&knoholem;BuildingRepresentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingRepresentation -->
+
+    <owl:Class rdf:about="&knoholem;BuildingRepresentation">
+        <rdfs:subClassOf rdf:resource="&knoholem;Visualisation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Corresponds to IfcRepresentation</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#BuildingZoneRepresentation -->
+
+    <owl:Class rdf:about="&knoholem;BuildingZoneRepresentation">
+        <rdfs:subClassOf rdf:resource="&knoholem;BuildingRepresentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#CO2Sensor -->
+
+    <owl:Class rdf:about="&knoholem;CO2Sensor">
+        <rdfs:subClassOf rdf:resource="&knoholem;Sensor"/>
+        <correspondsToIfcEnumerationElement rdf:datatype="&xsd;string">CO2SENSOR</correspondsToIfcEnumerationElement>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcSensorType</correspondsToIfcEntity>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Chair -->
+
+    <owl:Class rdf:about="&knoholem;Chair">
+        <rdfs:subClassOf rdf:resource="&knoholem;Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Close_Opening -->
+
+    <owl:Class rdf:about="&knoholem;Close_Opening">
+        <rdfs:subClassOf rdf:resource="&knoholem;InterruptActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#CoffeeBreak -->
+
+    <owl:Class rdf:about="&knoholem;CoffeeBreak">
+        <rdfs:subClassOf rdf:resource="&knoholem;ScheduledActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ComfortState -->
+
+    <owl:Class rdf:about="&knoholem;ComfortState">
+        <rdfs:subClassOf rdf:resource="&knoholem;ComplexState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#CommunicationsAppliance -->
+
+    <owl:Class rdf:about="&knoholem;CommunicationsAppliance">
+        <rdfs:subClassOf rdf:resource="&knoholem;ElectricalElement"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcCommunicationsAppliance</correspondsToIfcEntity>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ComplexState -->
+
+    <owl:Class rdf:about="&knoholem;ComplexState">
+        <rdfs:subClassOf rdf:resource="&knoholem;State"/>
+        <owl:disjointWith rdf:resource="&knoholem;SimpleState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Compressor -->
+
+    <owl:Class rdf:about="&knoholem;Compressor">
+        <rdfs:subClassOf rdf:resource="&knoholem;HVACElement"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcCompressor</correspondsToIfcEntity>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Controller -->
+
+    <owl:Class rdf:about="&knoholem;Controller">
+        <rdfs:subClassOf rdf:resource="&knoholem;BuildingControl"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcController</correspondsToIfcEntity>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Cupboard -->
+
+    <owl:Class rdf:about="&knoholem;Cupboard">
+        <rdfs:subClassOf rdf:resource="&knoholem;Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#DataRepresentation -->
+
+    <owl:Class rdf:about="&knoholem;DataRepresentation">
+        <rdfs:subClassOf rdf:resource="&knoholem;Visualisation"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Data representation refers to the manner in which data from sensors is displayed. For example, metered data may be represented as a chart. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#DesktopState -->
+
+    <owl:Class rdf:about="&knoholem;DesktopState">
+        <rdfs:subClassOf rdf:resource="&knoholem;SimpleState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Door -->
+
+    <owl:Class rdf:about="&knoholem;Door">
+        <rdfs:subClassOf rdf:resource="&knoholem;Opening"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcDoor</correspondsToIfcEntity>
+        <rdfs:comment rdf:datatype="&xsd;string">corresponds to IfcDoor in  IFCSHAREDBLDGELEMENTS </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#DoorState -->
+
+    <owl:Class rdf:about="&knoholem;DoorState">
+        <rdfs:subClassOf rdf:resource="&knoholem;SimpleState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ElectricAppliance -->
+
+    <owl:Class rdf:about="&knoholem;ElectricAppliance">
+        <rdfs:subClassOf rdf:resource="&knoholem;ElectricalElement"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcElectricAppliance</correspondsToIfcEntity>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ElectricalElement -->
+
+    <owl:Class rdf:about="&knoholem;ElectricalElement">
+        <rdfs:subClassOf rdf:resource="&knoholem;BuildingElement"/>
+        <rdfs:comment rdf:datatype="&xsd;string">corresponds to IFCELECTRICALDOMAIN</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ElementedWall -->
+
+    <owl:Class rdf:about="&knoholem;ElementedWall">
+        <rdfs:subClassOf rdf:resource="&knoholem;Wall"/>
+        <correspondsToIfcEnumerationElement rdf:datatype="&xsd;string">ELEMENTEDWALL</correspondsToIfcEnumerationElement>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcWallType</correspondsToIfcEntity>
+        <rdfs:comment rdf:datatype="&xsd;string">corresponds to IfcWallTypeEnum</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Elevator -->
+
+    <owl:Class rdf:about="&knoholem;Elevator">
+        <rdfs:subClassOf rdf:resource="&knoholem;StructuralElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyEfficiencyState -->
+
+    <owl:Class rdf:about="&knoholem;EnergyEfficiencyState">
+        <rdfs:subClassOf rdf:resource="&knoholem;ComplexState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyEfficient -->
+
+    <owl:Class rdf:about="&knoholem;EnergyEfficient">
+        <rdfs:subClassOf rdf:resource="&knoholem;EnergyEfficiencyState"/>
+        <owl:disjointWith rdf:resource="&knoholem;EnergyInefficient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyInefficient -->
+
+    <owl:Class rdf:about="&knoholem;EnergyInefficient">
+        <rdfs:subClassOf rdf:resource="&knoholem;EnergyEfficiencyState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyMeter -->
+
+    <owl:Class rdf:about="&knoholem;EnergyMeter">
+        <rdfs:subClassOf rdf:resource="&knoholem;Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyUsageAnomaly -->
+
+    <owl:Class rdf:about="&knoholem;EnergyUsageAnomaly">
+        <rdfs:subClassOf rdf:resource="&knoholem;EnergyInefficient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#EnergyWasting -->
+
+    <owl:Class rdf:about="&knoholem;EnergyWasting">
+        <rdfs:subClassOf rdf:resource="&knoholem;EnergyInefficient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Enter_Zone -->
+
+    <owl:Class rdf:about="&knoholem;Enter_Zone">
+        <rdfs:subClassOf rdf:resource="&knoholem;InterruptActivity"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&knoholem;hasNextState"/>
+                        <owl:someValuesFrom rdf:resource="&knoholem;ZoneOccupied"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&knoholem;hasPreviousState"/>
+                        <owl:someValuesFrom rdf:resource="&knoholem;ZoneEmpty"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Face -->
+
+    <owl:Class rdf:about="&knoholem;Face">
+        <rdfs:subClassOf rdf:resource="&knoholem;Zone"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Corresponds to IfcFace</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#FaceSurface -->
+
+    <owl:Class rdf:about="&knoholem;FaceSurface">
+        <rdfs:subClassOf rdf:resource="&knoholem;Face"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Fan -->
+
+    <owl:Class rdf:about="&knoholem;Fan">
+        <rdfs:subClassOf rdf:resource="&knoholem;HVACElement"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcFan</correspondsToIfcEntity>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#FireSensor -->
+
+    <owl:Class rdf:about="&knoholem;FireSensor">
+        <rdfs:subClassOf rdf:resource="&knoholem;Sensor"/>
+        <correspondsToIfcEnumerationElement rdf:datatype="&xsd;string">CO2SENSOR</correspondsToIfcEnumerationElement>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcSensorType</correspondsToIfcEntity>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Floor -->
+
+    <owl:Class rdf:about="&knoholem;Floor">
+        <rdfs:subClassOf rdf:resource="&knoholem;Slab"/>
+        <correspondsToIfcEnumerationElement rdf:datatype="&xsd;string">FLOOR</correspondsToIfcEnumerationElement>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcSlabType</correspondsToIfcEntity>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Furniture -->
+
+    <owl:Class rdf:about="&knoholem;Furniture">
+        <rdfs:subClassOf rdf:resource="&knoholem;BuildingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Goal -->
+
+    <owl:Class rdf:about="&knoholem;Goal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HVACElement -->
+
+    <owl:Class rdf:about="&knoholem;HVACElement">
+        <rdfs:subClassOf rdf:resource="&knoholem;BuildingElement"/>
+        <rdfs:comment rdf:datatype="&xsd;string">correspond to IFCHVACDOMAIN</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Heater -->
+
+    <owl:Class rdf:about="&knoholem;Heater">
+        <rdfs:subClassOf rdf:resource="&knoholem;HVACElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HeaterState -->
+
+    <owl:Class rdf:about="&knoholem;HeaterState">
+        <rdfs:subClassOf rdf:resource="&knoholem;SimpleState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HeaterStateOff -->
+
+    <owl:Class rdf:about="&knoholem;HeaterStateOff">
+        <rdfs:subClassOf rdf:resource="&knoholem;HeaterState"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&knoholem;hasSensor"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&knoholem;EnergyMeter"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&knoholem;hasAnalogValue"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="&xsd;double"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:maxInclusive rdf:datatype="&xsd;double">2.0</xsd:maxInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HeaterStateOn -->
+
+    <owl:Class rdf:about="&knoholem;HeaterStateOn">
+        <rdfs:subClassOf rdf:resource="&knoholem;HeaterState"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&knoholem;hasSensor"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&knoholem;EnergyMeter"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&knoholem;hasAnalogValue"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="&xsd;double"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minExclusive rdf:datatype="&xsd;double">2.0</xsd:minExclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HorizontalZone -->
+
+    <owl:Class rdf:about="&knoholem;HorizontalZone">
+        <rdfs:subClassOf rdf:resource="&knoholem;Zone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#HumiditySensor -->
+
+    <owl:Class rdf:about="&knoholem;HumiditySensor">
+        <rdfs:subClassOf rdf:resource="&knoholem;Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Inside -->
+
+    <owl:Class rdf:about="&knoholem;Inside">
+        <rdfs:subClassOf rdf:resource="&knoholem;HorizontalZone"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&knoholem;hasSlab"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="&knoholem;Outside"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#InterruptActivity -->
+
+    <owl:Class rdf:about="&knoholem;InterruptActivity">
+        <rdfs:subClassOf rdf:resource="&knoholem;UserBehaviour"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A user conducting an activity in a zone will attempt to affect the zone in such a way as to bring about their optimal level of comfort. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Lamp -->
+
+    <owl:Class rdf:about="&knoholem;Lamp">
+        <rdfs:subClassOf rdf:resource="&knoholem;ElectricalElement"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcLamp</correspondsToIfcEntity>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Landing -->
+
+    <owl:Class rdf:about="&knoholem;Landing">
+        <rdfs:subClassOf rdf:resource="&knoholem;Slab"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcSlabType</correspondsToIfcEntity>
+        <correspondsToIfcEnumerationElement rdf:datatype="&xsd;string">LANDING</correspondsToIfcEnumerationElement>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#LightState -->
+
+    <owl:Class rdf:about="&knoholem;LightState">
+        <rdfs:subClassOf rdf:resource="&knoholem;SimpleState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#LuminanceSensor -->
+
+    <owl:Class rdf:about="&knoholem;LuminanceSensor">
+        <rdfs:subClassOf rdf:resource="&knoholem;Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Lunch -->
+
+    <owl:Class rdf:about="&knoholem;Lunch">
+        <rdfs:subClassOf rdf:resource="&knoholem;ScheduledActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Meeting -->
+
+    <owl:Class rdf:about="&knoholem;Meeting">
+        <rdfs:subClassOf rdf:resource="&knoholem;ScheduledActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OccupancySensor -->
+
+    <owl:Class rdf:about="&knoholem;OccupancySensor">
+        <rdfs:subClassOf rdf:resource="&knoholem;Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OffFromWork -->
+
+    <owl:Class rdf:about="&knoholem;OffFromWork">
+        <rdfs:subClassOf rdf:resource="&knoholem;ScheduledActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OfficeHall -->
+
+    <owl:Class rdf:about="&knoholem;OfficeHall">
+        <rdfs:subClassOf rdf:resource="&knoholem;Inside"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OfficeWork -->
+
+    <owl:Class rdf:about="&knoholem;OfficeWork">
+        <rdfs:subClassOf rdf:resource="&knoholem;ScheduledActivity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Open_Opening -->
+
+    <owl:Class rdf:about="&knoholem;Open_Opening">
+        <rdfs:subClassOf rdf:resource="&knoholem;InterruptActivity"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&knoholem;hasNextState"/>
+                        <owl:someValuesFrom rdf:resource="&knoholem;OpeningOpen"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&knoholem;hasPreviousState"/>
+                        <owl:someValuesFrom rdf:resource="&knoholem;OpeningClosed"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Opening -->
+
+    <owl:Class rdf:about="&knoholem;Opening">
+        <rdfs:subClassOf rdf:resource="&knoholem;StructuralElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OpeningClosed -->
+
+    <owl:Class rdf:about="&knoholem;OpeningClosed">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&knoholem;Opening"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&knoholem;hasSensors"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&knoholem;OpeningSensor"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&knoholem;hasBinaryValue"/>
+                                        <owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&knoholem;OpeningState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OpeningOpen -->
+
+    <owl:Class rdf:about="&knoholem;OpeningOpen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&knoholem;Opening"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&knoholem;hasSensors"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&knoholem;OpeningSensor"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&knoholem;hasBinaryValue"/>
+                                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&knoholem;OpeningState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OpeningSensor -->
+
+    <owl:Class rdf:about="&knoholem;OpeningSensor">
+        <rdfs:subClassOf rdf:resource="&knoholem;Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#OpeningState -->
+
+    <owl:Class rdf:about="&knoholem;OpeningState">
+        <rdfs:subClassOf rdf:resource="&knoholem;SimpleState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Organisation -->
+
+    <owl:Class rdf:about="&knoholem;Organisation">
+        <rdfs:subClassOf rdf:resource="&knoholem;Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Outside -->
+
+    <owl:Class rdf:about="&knoholem;Outside">
+        <rdfs:subClassOf rdf:resource="&knoholem;HorizontalZone"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&knoholem;hasSlab"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#PathNode -->
+
+    <owl:Class rdf:about="&knoholem;PathNode"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Placement -->
+
+    <owl:Class rdf:about="&knoholem;Placement">
+        <rdfs:comment rdf:datatype="&xsd;string">Corresponds to IfcPlacement</rdfs:comment>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcPlacement</correspondsToIfcEntity>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#PlumbingAndFireProtectionElement -->
+
+    <owl:Class rdf:about="&knoholem;PlumbingAndFireProtectionElement">
+        <rdfs:subClassOf rdf:resource="&knoholem;BuildingElement"/>
+        <rdfs:comment rdf:datatype="&xsd;string">correspond to IFCPLUMBINGFIREPROTECTIONDOMAIN</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#PlumbingWall -->
+
+    <owl:Class rdf:about="&knoholem;PlumbingWall">
+        <rdfs:subClassOf rdf:resource="&knoholem;Wall"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcWallType</correspondsToIfcEntity>
+        <correspondsToIfcEnumerationElement rdf:datatype="&xsd;string">PLUMBINGWALL</correspondsToIfcEnumerationElement>
+        <rdfs:comment rdf:datatype="&xsd;string">corresponds to IfcWallTypeEnum</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#PolygonalWall -->
+
+    <owl:Class rdf:about="&knoholem;PolygonalWall">
+        <rdfs:subClassOf rdf:resource="&knoholem;Wall"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcWallType</correspondsToIfcEntity>
+        <correspondsToIfcEnumerationElement rdf:datatype="&xsd;string">POLYGONWALL</correspondsToIfcEnumerationElement>
+        <rdfs:comment rdf:datatype="&xsd;string">corresponds to IfcWallTypeEnum</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#RainSensor -->
+
+    <owl:Class rdf:about="&knoholem;RainSensor">
+        <rdfs:subClassOf rdf:resource="&knoholem;Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Ramp -->
+
+    <owl:Class rdf:about="&knoholem;Ramp">
+        <rdfs:subClassOf rdf:resource="&knoholem;StructuralElement"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcRamp</correspondsToIfcEntity>
+        <rdfs:comment rdf:datatype="&xsd;string">corresponds to IfcRamp in  IFCSHAREDBLDGELEMENTS </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#RealSensorData -->
+
+    <owl:Class rdf:about="&knoholem;RealSensorData">
+        <rdfs:subClassOf rdf:resource="&knoholem;SensorData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Role -->
+
+    <owl:Class rdf:about="&knoholem;Role">
+        <rdfs:subClassOf rdf:resource="&knoholem;User"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Roof -->
+
+    <owl:Class rdf:about="&knoholem;Roof">
+        <rdfs:subClassOf rdf:resource="&knoholem;StructuralElement"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcRoof</correspondsToIfcEntity>
+        <rdfs:comment rdf:datatype="&xsd;string">corresponds to IfcRoof in  IFCSHAREDBLDGELEMENTS </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#RoofSlab -->
+
+    <owl:Class rdf:about="&knoholem;RoofSlab">
+        <rdfs:subClassOf rdf:resource="&knoholem;Slab"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcSlabType</correspondsToIfcEntity>
+        <correspondsToIfcEnumerationElement rdf:datatype="&xsd;string">ROOF</correspondsToIfcEnumerationElement>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Room -->
+
+    <owl:Class rdf:about="&knoholem;Room">
+        <rdfs:subClassOf rdf:resource="&knoholem;Inside"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Scheduled -->
+
+    <owl:Class rdf:about="&knoholem;Scheduled">
+        <rdfs:subClassOf rdf:resource="&knoholem;SystemBehaviour"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ScheduledActivity -->
+
+    <owl:Class rdf:about="&knoholem;ScheduledActivity">
+        <rdfs:subClassOf rdf:resource="&knoholem;UserBehaviour"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SecurityState -->
+
+    <owl:Class rdf:about="&knoholem;SecurityState">
+        <rdfs:subClassOf rdf:resource="&knoholem;ComplexState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Sensor -->
+
+    <owl:Class rdf:about="&knoholem;Sensor">
+        <rdfs:subClassOf rdf:resource="&knoholem;BuildingControl"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcSensor</correspondsToIfcEntity>
+        <rdfs:comment rdf:datatype="&xsd;string">correspond to IfcSensor in IFCBUILDINGCONTROLSDOMAIN. The subclasses correspond to IfcSensorTypeEnum</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SensorData -->
+
+    <owl:Class rdf:about="&knoholem;SensorData"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ShearWall -->
+
+    <owl:Class rdf:about="&knoholem;ShearWall">
+        <rdfs:subClassOf rdf:resource="&knoholem;Wall"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcWallType</correspondsToIfcEntity>
+        <correspondsToIfcEnumerationElement rdf:datatype="&xsd;string">SHEAR</correspondsToIfcEnumerationElement>
+        <rdfs:comment rdf:datatype="&xsd;string">corresponds to IfcWallTypeEnum</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SimpleState -->
+
+    <owl:Class rdf:about="&knoholem;SimpleState">
+        <rdfs:subClassOf rdf:resource="&knoholem;State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SimulatedSensorData -->
+
+    <owl:Class rdf:about="&knoholem;SimulatedSensorData">
+        <rdfs:subClassOf rdf:resource="&knoholem;SensorData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Slab -->
+
+    <owl:Class rdf:about="&knoholem;Slab">
+        <rdfs:subClassOf rdf:resource="&knoholem;StructuralElement"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcSlab</correspondsToIfcEntity>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Stair -->
+
+    <owl:Class rdf:about="&knoholem;Stair">
+        <rdfs:subClassOf rdf:resource="&knoholem;StructuralElement"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcStair</correspondsToIfcEntity>
+        <rdfs:comment rdf:datatype="&xsd;string">corresponds to IfcStair in  IFCSHAREDBLDGELEMENTS </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#StandardWall -->
+
+    <owl:Class rdf:about="&knoholem;StandardWall">
+        <rdfs:subClassOf rdf:resource="&knoholem;Wall"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcWallType</correspondsToIfcEntity>
+        <correspondsToIfcEnumerationElement rdf:datatype="&xsd;string">STANDARD</correspondsToIfcEnumerationElement>
+        <rdfs:comment rdf:datatype="&xsd;string">corresponds to IfcWallTypeEnum</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#State -->
+
+    <owl:Class rdf:about="&knoholem;State"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#StateRepresentation -->
+
+    <owl:Class rdf:about="&knoholem;StateRepresentation">
+        <rdfs:subClassOf rdf:resource="&knoholem;BuildingRepresentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Storey -->
+
+    <owl:Class rdf:about="&knoholem;Storey">
+        <rdfs:subClassOf rdf:resource="&knoholem;Inside"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#StructuralElement -->
+
+    <owl:Class rdf:about="&knoholem;StructuralElement">
+        <rdfs:subClassOf rdf:resource="&knoholem;BuildingElement"/>
+        <rdfs:comment rdf:datatype="&xsd;string">mainly correspond to IFCSHAREDBLDGELEMENTS</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#SystemBehaviour -->
+
+    <owl:Class rdf:about="&knoholem;SystemBehaviour">
+        <rdfs:subClassOf rdf:resource="&knoholem;Behaviour"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Table -->
+
+    <owl:Class rdf:about="&knoholem;Table">
+        <rdfs:subClassOf rdf:resource="&knoholem;Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#TemperatureSensor -->
+
+    <owl:Class rdf:about="&knoholem;TemperatureSensor">
+        <rdfs:subClassOf rdf:resource="&knoholem;Sensor"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcSensorType</correspondsToIfcEntity>
+        <correspondsToIfcEnumerationElement rdf:datatype="&xsd;string">TEMPERATURESENSOR</correspondsToIfcEnumerationElement>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#UnitaryControlElement -->
+
+    <owl:Class rdf:about="&knoholem;UnitaryControlElement">
+        <rdfs:subClassOf rdf:resource="&knoholem;BuildingControl"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcUnitaryControllerElement</correspondsToIfcEntity>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#User -->
+
+    <owl:Class rdf:about="&knoholem;User">
+        <rdfs:subClassOf rdf:resource="&knoholem;Actor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#UserBehaviour -->
+
+    <owl:Class rdf:about="&knoholem;UserBehaviour">
+        <rdfs:subClassOf rdf:resource="&knoholem;Behaviour"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#UserControlled -->
+
+    <owl:Class rdf:about="&knoholem;UserControlled">
+        <rdfs:subClassOf rdf:resource="&knoholem;SystemBehaviour"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#VerticalZone -->
+
+    <owl:Class rdf:about="&knoholem;VerticalZone">
+        <rdfs:subClassOf rdf:resource="&knoholem;Zone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Visualisation -->
+
+    <owl:Class rdf:about="&knoholem;Visualisation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Volume -->
+
+    <owl:Class rdf:about="&knoholem;Volume"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Wall -->
+
+    <owl:Class rdf:about="&knoholem;Wall">
+        <rdfs:subClassOf rdf:resource="&knoholem;StructuralElement"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcWall</correspondsToIfcEntity>
+        <rdfs:comment rdf:datatype="&xsd;string">corresponds to ifcWall in  IFCSHAREDBLDGELEMENTS</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WallRepresentation -->
+
+    <owl:Class rdf:about="&knoholem;WallRepresentation">
+        <rdfs:subClassOf rdf:resource="&knoholem;BuildingElementRepresentation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindAlertSensor -->
+
+    <owl:Class rdf:about="&knoholem;WindAlertSensor">
+        <rdfs:subClassOf rdf:resource="&knoholem;WindSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindDirectionSensor -->
+
+    <owl:Class rdf:about="&knoholem;WindDirectionSensor">
+        <rdfs:subClassOf rdf:resource="&knoholem;WindSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindPowerSensor -->
+
+    <owl:Class rdf:about="&knoholem;WindPowerSensor">
+        <rdfs:subClassOf rdf:resource="&knoholem;WindSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindSensor -->
+
+    <owl:Class rdf:about="&knoholem;WindSensor">
+        <rdfs:subClassOf rdf:resource="&knoholem;Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindSpeedSensor -->
+
+    <owl:Class rdf:about="&knoholem;WindSpeedSensor">
+        <rdfs:subClassOf rdf:resource="&knoholem;WindSensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Window -->
+
+    <owl:Class rdf:about="&knoholem;Window">
+        <rdfs:subClassOf rdf:resource="&knoholem;Opening"/>
+        <correspondsToIfcEntity rdf:datatype="&xsd;string">IfcWindow</correspondsToIfcEntity>
+        <rdfs:comment rdf:datatype="&xsd;string">corresponds to IfcWindow in  IFCSHAREDBLDGELEMENTS </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#WindowState -->
+
+    <owl:Class rdf:about="&knoholem;WindowState">
+        <rdfs:subClassOf rdf:resource="&knoholem;SimpleState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#Zone -->
+
+    <owl:Class rdf:about="&knoholem;Zone">
+        <rdfs:subClassOf rdf:resource="&knoholem;BuildingElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ZoneEmpty -->
+
+    <owl:Class rdf:about="&knoholem;ZoneEmpty">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&knoholem;Zone"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&knoholem;hasSensors"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&knoholem;OccupancySensor"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&knoholem;hasBinaryValue"/>
+                                        <owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&knoholem;ZoneState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ZoneOccupied -->
+
+    <owl:Class rdf:about="&knoholem;ZoneOccupied">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&knoholem;Zone"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&knoholem;hasSensors"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&knoholem;OccupancySensor"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&knoholem;hasBinaryValue"/>
+                                        <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&knoholem;ZoneState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/knoholem.owl#ZoneState -->
+
+    <owl:Class rdf:about="&knoholem;ZoneState">
+        <rdfs:subClassOf rdf:resource="&knoholem;SimpleState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Building_Manager -->
+
+    <owl:Class rdf:about="&wp4;Building_Manager">
+        <rdfs:subClassOf rdf:resource="&wp4;Employee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Carer -->
+
+    <owl:Class rdf:about="&wp4;Carer">
+        <rdfs:subClassOf rdf:resource="&wp4;Employee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Cleaner -->
+
+    <owl:Class rdf:about="&wp4;Cleaner">
+        <rdfs:subClassOf rdf:resource="&wp4;Employee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Cook -->
+
+    <owl:Class rdf:about="&wp4;Cook">
+        <rdfs:subClassOf rdf:resource="&wp4;Employee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Employee -->
+
+    <owl:Class rdf:about="&wp4;Employee">
+        <rdfs:subClassOf rdf:resource="&knoholem;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Facility_Manager -->
+
+    <owl:Class rdf:about="&wp4;Facility_Manager">
+        <rdfs:subClassOf rdf:resource="&wp4;Employee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#OfficeWorker -->
+
+    <owl:Class rdf:about="&wp4;OfficeWorker">
+        <rdfs:subClassOf rdf:resource="&wp4;Employee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Patient -->
+
+    <owl:Class rdf:about="&wp4;Patient">
+        <rdfs:subClassOf rdf:resource="&knoholem;Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Prediction_Method -->
+
+    <owl:Class rdf:about="&wp4;Prediction_Method">
+        <rdfs:subClassOf rdf:resource="&knoholem;UserBehaviour"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Scheduling interrupt activities is done using two different methods, namely the S-curve method and the probabilistic method (tabak). For each activity an assumption is taken on the most appropriate occurrence prediction method based on their characteristics.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#Probabilistic -->
+
+    <owl:Class rdf:about="&wp4;Probabilistic">
+        <rdfs:subClassOf rdf:resource="&wp4;Prediction_Method"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2012/9/wp4.owl#S-curve -->
+
+    <owl:Class rdf:about="&wp4;S-curve">
+        <rdfs:subClassOf rdf:resource="&wp4;Prediction_Method"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
